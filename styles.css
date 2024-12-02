@@ -1,11 +1,71 @@
-.snowflake { 
-    font-size: 21px;
+:root {
+    --primary-color: red;
+    --secondary-color: green;
+    --font-color: white;
+    --font-family: 'Lobster', 'Great Vibes', cursive;
+}
+
+
+body {
+    background-color: var(--primary-color);
+    background-image: url('images/bg.jpg');
+    color: var(--font-color);
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    text-align: center;
+    font-family: var(--font-family);
+}
+.greeting { 
+    background-color:  var(--secondary-color);;
+    padding: 40px;
+    margin: 20px 0; 
+    border: 1px solid var(--primary-color);
+    box-shadow: 5px 5px 10px var(--primary-color);
+    border-radius: 15px;
 }
 
 h1 {
     font-weight: normal;
+    font-family: var(--font-family);
 }
 
-.christmas-tree {
-    font-size: 24px;
+.snowflake { 
+    font-size: 21px;
+    color: white;
+    position: absolute; 
+    top: 0;
+    left: 50%;
+    animation: fall 5s linear infinite; 
+} 
+
+.snowflake:nth-child(1) { 
+    left: 10%;
+    animation-delay: 0s; 
+}
+
+.snowflake:nth-child(2) { 
+    left: 50%;
+    animation-delay: 0s; 
+}
+
+.snowflake:nth-child(3) { 
+    left: 90%;
+    animation-delay: 0s; 
+}
+
+.christmas-tree { 
+    font-size: 32px;
+    color: var(--font-color);
+} 
+
+@keyframes fall { 
+    0% { top: -10%; } 
+    100% { top: 110%; } 
 }
