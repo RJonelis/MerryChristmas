@@ -20,7 +20,21 @@ body {
     height: 100vh; 
     text-align: center;
     font-family: var(--font-family);
+    cursor: url('images/tree.png'), auto;
+    animation: moveBody 1s infinite;
 }
+
+
+@keyframes moveBody {
+    0% { transform: translate(0, 0); }
+    25% { transform: translate(5px, -5px); }
+    50% { transform: translate(0, -10px); }
+    75% { transform: translate(-5px, -5px); }
+    100% { transform: translate(0, 0); }
+}
+
+
+
 .greeting { 
     background-color:  var(--secondary-color);
     padding: 40px;
@@ -82,12 +96,14 @@ h1 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s; 
     animation: pulse 1.5s infinite;
+    cursor: url('images/ball.png'), auto;
 } 
 
 .button:hover { 
     background-color: #ff6347; 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
     transform: scale(1.1);
+    cursor: url('images/ball.png'), auto;
 }
 
 @keyframes pulse { 
